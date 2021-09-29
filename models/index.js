@@ -11,6 +11,8 @@ if (config.use_env_variable) {
 }
 
 db.User = require('./user')(sequelize,Sequelize)
+db.assets = require('./assets')(sequelize,Sequelize)
+db.transaction = require('./transaction')(sequelize,Sequelize)
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {

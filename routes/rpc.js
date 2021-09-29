@@ -34,7 +34,7 @@ router.get('/getblockcount',(req,res,next)=>{
             const body = JSON.parse(data)
             res.json(body)
         }else{
-            logger.error('/getblockcount err')
+            logger.error('/getblockcount error')
             next()
         }
     }
